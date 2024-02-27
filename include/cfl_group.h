@@ -319,6 +319,21 @@ int Fl_Terminal_scrollbar_size(Fl_Terminal const *self);
 
 void Fl_Terminal_set_scrollbar_size(Fl_Terminal *self, int set);
 
+int Fl_Terminal_hscrollbar_actual_size(Fl_Terminal const *self);
+
+int Fl_Terminal_hscrollbar_size(Fl_Terminal const *self);
+
+void Fl_Terminal_set_hscrollbar_size(Fl_Terminal *self, int set);
+
+int Fl_Terminal_hscroll_col(Fl_Terminal const *self);
+
+void Fl_Terminal_set_hscroll_col(Fl_Terminal *self, int set);
+
+int Fl_Terminal_hscrollbar_style(Fl_Terminal const *self);   // Actually returns enum HScrollbarStyle
+
+void Fl_Terminal_set_hscrollbar_style(Fl_Terminal *self, int set);
+
+
 unsigned Fl_Terminal_selection_bg_color(Fl_Terminal const *self
 ); // Actually Fl_Color
 

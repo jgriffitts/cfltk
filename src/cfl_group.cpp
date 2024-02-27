@@ -752,6 +752,38 @@ void Fl_Terminal_set_scrollbar_size(Fl_Terminal *self, int set) {
     LOCK(self->scrollbar_size(set));
 }
 
+int Fl_Terminal_hscrollbar_actual_size(Fl_Terminal const *self) {
+    LOCK(auto ret = self->hscrollbar_actual_size());
+    return ret;
+}
+
+int Fl_Terminal_hscrollbar_size(Fl_Terminal const *self) {
+    LOCK(auto ret = self->hscrollbar_size());
+    return ret;
+}
+
+void Fl_Terminal_set_hscrollbar_size(Fl_Terminal *self, int set) {
+    LOCK(self->hscrollbar_size(set));
+}
+
+int Fl_Terminal_hscroll_col(Fl_Terminal const *self) {
+    LOCK(auto ret = self->hscroll_col());
+    return ret;
+}
+
+void Fl_Terminal_set_hscroll_col(Fl_Terminal *self, int set) {
+    LOCK(self->hscroll_col(set));
+}
+
+int Fl_Terminal_hscrollbar_style(Fl_Terminal const *self) {  // Actually returns enum HScrollbarStyle
+    LOCK(auto ret = self->hscrollbar_style());
+    return ret;
+}
+
+void Fl_Terminal_set_hscrollbar_style(Fl_Terminal *self, int set) {
+    LOCK(self->hscrollbar_style((Fl_Terminal::HScrollbarStyle) set));
+}
+
 unsigned Fl_Terminal_selection_bg_color(Fl_Terminal const *self
 ) { // Actually returns Fl_Color
     LOCK(auto ret = self->selectionbgcolor());
